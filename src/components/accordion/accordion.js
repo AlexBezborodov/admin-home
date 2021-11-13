@@ -61,14 +61,14 @@ function AccordionWrapper(props) {
   return (
     <div className="accordion-item-wrapper">
     <h4>{props.name}</h4>
-      <Accordion defaultActiveKey="0">
-        <Accordion.Item  eventKey={props.key}>
+      <Accordion defaultActiveKey='0'>
+        <Accordion.Item  eventKey='0'>
           <Accordion.Header >
             <div className='accordion-header-pos'>
               {isAdvanced ? '' : <Button variant="info">{props.btn}</Button>}
               <span>{props.link}</span>
             </div>
-                
+            { (props.show) ? <button className='static-btn'>Try it out</button> : null }    
           </Accordion.Header>
           <Accordion.Body>
             <div className='accordeon-body'>

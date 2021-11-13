@@ -8,11 +8,13 @@
   align-items: center;
   height: 40px;
   padding: 1px;
+  position: relative;
   button {
     color: azure;
     width: 65px;
     height: 44px;
   }
+  
   span {
     margin-left: 1rem;
     font-family: Helvetica;
@@ -71,4 +73,13 @@
       box-shadow: 0px 2px 4px rgba(206, 212, 218, 0.7);
     }
   }
+}
+.static-btn {
+  width: 90px;
+  height: 24px;
+  border-radius: 3px;
+  border: 1px solid #54565A;
+  position: absolute;
+  top: 10px;
+  right: 35px;
 }
