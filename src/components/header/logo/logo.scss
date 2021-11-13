@@ -1,0 +1,27 @@
+.logo {
+    display: flex;
+    .logo-img {
+        background: #231F20;
+        width: 91px;
+        height: 91px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+    }
+    .logo-text {
+        padding: 59px 10px 0;
+        span {
+           color: #26A7DD;
+        }
+    }
+}
+@media (max-width: 515px) {
+    .logo {
+        flex-direction: column;
+        align-items: center;
+        .logo-text {
+            padding-top: 15px;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.detailed-block {
+    margin: 10rem 0 2rem 0;
+}
+
+@media (max-width: 515px) {
+    .detailed-block {
+        margin-top: 15rem;
+    }
+}

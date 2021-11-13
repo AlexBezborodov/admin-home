@@ -1,0 +1,36 @@
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: azure!important;
+    background-color: #26A7DD!important;
+    
+}
+.nav-tabs .nav-link {
+    color: #231F20!important;
+    background-color: #EEEEEE!important;
+   
+}
+.nav-tabs {
+    border-bottom: none!important;
+}
+.tabs-text {
+    margin: 2rem 0;
+}
+.custom-tabs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .nav-item {
+        width: 50%;
+        button {
+            width: 100%;
+        }
+    }
+    
+}
+@media (max-width:515px) {
+    .custom-tabs {
+        .nav-item {
+            width: 100%;
+        }
+        
+    }
+}
