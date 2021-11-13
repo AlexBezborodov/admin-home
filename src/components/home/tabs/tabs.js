@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button'
 import React from "react";
 import { useState } from "react";
+import OpenedAccordion from '../../opened-accordion/opened-accordion';
 
 import { Tabs, Tab } from "react-bootstrap";
 import AccordionWrapper from "../../accordion/accordion";
@@ -28,9 +29,10 @@ function CustomdTabs() {
         <div className='tabs-text'>  
             <p className='text-start'>{tabText}</p>         
         </div>
+        <OpenedAccordion key={`${mockData[0].id}`} link={mockData[0].link}  name={mockData[0].name} btn={mockData[0].btn} isAdvanced={mockData[0].isAdvanced} show={true}/>
         {mockData.map( (item, id) => {
           
-         return <AccordionWrapper key={`${item.id}`} link={item.link}  name={item.name} btn={item.btn} isAdvanced={item.isAdvanced} show={true}/> 
+         return <AccordionWrapper key={`${item.id}`} link={item.link}  name={item.name} btn={item.btn} isAdvanced={item.isAdvanced} show={false}/> 
         })}
         <div className='tabs-text'>  
             <p className='text-start'>{tabText}</p>         
@@ -41,7 +43,8 @@ function CustomdTabs() {
         </div>
         </Tab>
         <Tab eventKey="advancedApi" title="Trimont Advances OData API">
-        <AccordionWrapper key={'0'} link={'https://trimontoda.azurewebsites$metadata'} name={'Trimont'} btn={'Get'} isAdvanced={true}/>
+        
+        <OpenedAccordion key={'0'} link={'https://trimontoda.azurewebsites$metadata'}  name={'Trimont'} btn={'Get'} isAdvanced={true} show={true}/>
         <div className='btns-block'>
             <Button >Download Metadata</Button>
         </div>
