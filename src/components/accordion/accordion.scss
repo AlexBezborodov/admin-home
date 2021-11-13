@@ -6,14 +6,22 @@
 .accordion-header-pos {
   display: flex;
   align-items: center;
+  height: 40px;
+  padding: 1px;
   button {
     color: azure;
-    width: 75px;
-    height: 50px;
+    width: 65px;
+    height: 44px;
   }
   span {
     margin-left: 1rem;
-    overflow-x: hidden!important;
+    font-family: Helvetica;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
   }
 }
 .accordion-body,
@@ -47,6 +55,16 @@
     margin-right: 10px;
     background-color: #d8dfe5;
     border-color: #d8dfe5;
+    height: 50px;
+    font-family: Helvetica;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #231F20;
+
     &:hover {
       background: #d8dfe5;
       border-color: #d8dfe5;

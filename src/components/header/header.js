@@ -6,7 +6,7 @@ import './header.scss'
  function Header() {
   return (
     <div >
-      <Navbar fixed='top' className='header-container' collapseOnSelect expand="md">
+  <Navbar fixed='top' className='header-container' collapseOnSelect expand="md">
   <Container>
   <Navbar.Brand href="#home">
     <Logo />

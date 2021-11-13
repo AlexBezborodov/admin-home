@@ -11,13 +11,16 @@ import TextBlock from './text-block/text-block';
 
  function home() {
     return (
-        <Container >   
+        <div>
         <Header />
+        <Container >   
         <TextBlock />
         <CustomTabs />
+        </Container>
         <RegisterBlock />
         <Footer />
-        </Container>
+        </div>
+        
     )
 }
 export default home;

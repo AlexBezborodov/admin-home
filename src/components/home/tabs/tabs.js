@@ -13,8 +13,7 @@ function CustomdTabs() {
   const mockData = [
     {id: 1, link: 'Trimont_Borrowers', name: '/api/TrimontBorrowers', color: 'Info', btn: 'Get', isAdvanced: false},
     {id: 2, link: 'Trimont_Collaterals', name: '/api/TrimontCollaterals', color: 'Success', btn: 'Put', isAdvanced: false},
-    {id: 3, link: 'Trimont_Borrowers', name: 'TrimontBorrowers', color: 'Warning', btn: 'Post', isAdvanced: false},
-    {id: 4, link: 'Trimont_Collaterals', name: 'TrimontCollaterals', color: 'Danger', btn: 'Delete', isAdvanced: false}
+    {id: 3, link: 'Trimont_Borrowers', name: 'TrimontBorrowers', color: 'Warning', btn: 'Post', isAdvanced: false}
   ]
 
   return (
@@ -29,13 +28,8 @@ function CustomdTabs() {
         <div className='tabs-text'>  
             <p className='text-start'>{tabText}</p>         
         </div>
-        {/* <AccordionWrapper key={0} link={'/api/TrimontBorrowers'} name={'Trimont_Borrowers'} btn={'Get'} isAdvanced={false} />
-        <AccordionWrapper key={100} link={'/api/TrimontCollaterals'}  name={'Trimont_Collaterals'}btn={'Get'} isAdvanced={false}/>
-        <AccordionWrapper key={100} link={'/api/TrimontBorrowers'}  name={'Trimont_Borrowers'}btn={'Get'} isAdvanced={false}/>
-        <AccordionWrapper key={100} link={'/api/TrimontCollaterals'} name={'Trimont_Collaterals'} btn={'Get'} isAdvanced={false}/>
-        <AccordionWrapper key={100} link={'/api/TrimontBorrowers'}  name={'Trimont_Borrowers'}btn={'Get'} isAdvanced={false}/> */}
         {mockData.map( (item, id) => {
-         return         <AccordionWrapper key={id} link={item.link}  name={item.name} btn={item.btn} isAdvanced={item.isAdvanced}/> 
+         return         <AccordionWrapper key={`${id}`} link={item.link}  name={item.name} btn={item.btn} isAdvanced={item.isAdvanced}/> 
 
         })}
         <div className='tabs-text'>  
@@ -47,7 +41,7 @@ function CustomdTabs() {
         </div>
         </Tab>
         <Tab eventKey="advancedApi" title="Trimont Advances OData API">
-        <AccordionWrapper key={0} link={'https://trimontoda.azurewebsites$metadata'} name={'Trimont'} btn={'Get'} isAdvanced={true}/>
+        <AccordionWrapper key={'0'} link={'https://trimontoda.azurewebsites$metadata'} name={'Trimont'} btn={'Get'} isAdvanced={true}/>
         <div className='btns-block'>
             <Button >Download Metadata</Button>
         </div>

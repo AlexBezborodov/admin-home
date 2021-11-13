@@ -21,7 +21,7 @@ import awards from '../../assets/footer/awards.png'
                 </div>
             </div>
             <div className='divider'></div>
-            <div className="row mt-3">
+            <div className="row mt-3 pb-5">
             
             	<div className="col-md-9 links">
             	<p className="mb-0 pb-1"><a href="/privacy-policy">Privacy Policy</a> &nbsp;|&nbsp; <a href="/privacy-policy-for-california">Privacy Policy for California</a> &nbsp;|&nbsp; <a href="/privacy-policy-for-australia">Privacy Policy for Australia</a></p>

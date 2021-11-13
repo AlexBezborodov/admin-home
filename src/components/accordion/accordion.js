@@ -6,7 +6,7 @@ import './accordion.scss'
 
 function AccordionWrapper(props) {
    const isAdvanced = props.isAdvanced 
-   const data = [
+   const data = `[
         {
             "name": "db_server",
             "value": "azpdw1.database.windows.net",
@@ -37,13 +37,32 @@ function AccordionWrapper(props) {
             "value": "dwapi",
             "slotSetting": false
         },
-    ]
-   const mockData = JSON.stringify(data, null, 2) 
+    ]`
+    const advancedData = `
+    <EntityType Name="TriviewAsset">
+    <Key>
+        <PropertyRef Name="AssetPKID" />
+    </Key>
+    <Property Name="Records" Type="Edm.String" />
+    <Property Name="DealPKID" Type="Edm.Int32" />
+    <Property Name="DealID" Type="Edm.String" />
+    <Property Name="DealDesc" Type="Edm.String" />
+    <Property Name="AssetPKID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="AssetNbr" Type="Edm.String" />
+    <Property Name="AssetName" Type="Edm.String" />
+    <Property Name="LoanClassificationDesc" Type="Edm.String" />
+    <Property Name="LoanClassificationCode" Type="Edm.String" />
+    <Property Name="OriginationDate" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="PayoffDate" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="MaturityDate" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="MaximumMaturityDate" Type="Edm.DateTimeOffset" Nullable="false" />        
+    <Property Name="CurrencyCode" Type="Edm.String" />
+    `
   return (
     <div className="accordion-item-wrapper">
     <h4>{props.name}</h4>
-      <Accordion defaultActiveKey='1'>
-        <Accordion.Item  eventKey="0">
+      <Accordion defaultActiveKey="0">
+        <Accordion.Item  eventKey={props.key}>
           <Accordion.Header >
             <div className='accordion-header-pos'>
               {isAdvanced ? '' : <Button variant="info">{props.btn}</Button>}
@@ -53,9 +72,14 @@ function AccordionWrapper(props) {
           </Accordion.Header>
           <Accordion.Body>
             <div className='accordeon-body'>
-             <span>
-            {mockData} 
-            </span>  
+              <div className='json-area'>
+                <pre>
+                <code>
+                {isAdvanced ? advancedData : data}
+              </code>
+                </pre>
+              </div> 
+            
             </div>
           </Accordion.Body>
         </Accordion.Item>

@@ -2,14 +2,14 @@ footer {
     background-color: #F4FCFF;
     .footer {
         .footer-logo {
-            display: flex;
+            // display: flex;
             align-self: flex-start;
-            justify-content: center;
+            // justify-content: center;
           }
           .awards {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
           }
           .footer-wrapper {
             display: flex;
@@ -19,7 +19,8 @@ footer {
           }
           .divider {
             height: 1px;
-            background-color: grey;
+            background-color: lightgrey;
+            margin: 1rem 0;
           }
           .links a {
             color: #26a7dd;
@@ -27,7 +28,7 @@ footer {
           }
           .social-media {
               display: flex;
-              justify-content: center;
+              justify-content: flex-end;
             p {
               font-family: Helvetica;
               font-style: normal;
