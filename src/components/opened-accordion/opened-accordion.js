@@ -2,9 +2,9 @@ import Button from 'react-bootstrap/Button'
 import React from "react";
 import { Accordion } from "react-bootstrap";
 
-import './accordion.scss'
+import '../accordion/accordion.scss'
 
-function AccordionWrapper(props) {
+function OpenedAccordion(props) {
    const isAdvanced = props.isAdvanced 
    const data = `[
         {
@@ -61,7 +61,7 @@ function AccordionWrapper(props) {
   return (
     <div className="accordion-item-wrapper">
     <h4>{props.name}</h4>
-      <Accordion defaultActiveKey='2'>
+      <Accordion defaultActiveKey='0'>
         <Accordion.Item  eventKey='0'>
           <Accordion.Header >
             <div className='accordion-header-pos'>
@@ -87,4 +87,4 @@ function AccordionWrapper(props) {
     </div>
   );
 }
-export default AccordionWrapper;
+export default OpenedAccordion;
